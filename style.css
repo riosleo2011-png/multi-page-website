@@ -5,105 +5,78 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+  font-family: Arial;
   background: #f5f5f5;
   color: #333;
 }
 
-/* container spacing */
-section {
-  padding: 60px 20px;
-}
-
-/* HEADER */
 header {
   background: #222;
   color: white;
   padding: 20px;
 }
 
-header nav {
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-header ul {
+nav ul {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 15px;
 }
 
-header a {
+nav a {
   color: white;
   text-decoration: none;
 }
 
-header a:hover {
-  text-decoration: underline;
+section {
+  padding: 40px 20px;
 }
 
-/* FOOTER */
-footer {
+.page-title {
   text-align: center;
-  padding: 20px;
-  background: #222;
-  color: white;
+  background: white;
 }
 
- /* HERO SECTION */
 .hero {
   display: flex;
-  justify-content: center;
-  gap: 20px;
-  background: #ddd;
-  text-align: center;
+  gap: 10px;
 }
 
-.hero .slide {
-  background: white;
-  padding: 40px;
-  flex: 1;
-  border-radius: 10px;
+.hero img {
+  width: 100%;
 }
 
-/* ABOUT PREVIEW */
-.about-preview {
+.about-preview,
+.about-section {
   display: flex;
-  align-items: center;
-  gap: 30px;
+  gap: 20px;
   max-width: 1000px;
   margin: auto;
   background: white;
-  border-radius: 10px;
+  padding: 20px;
 }
 
-.about-preview img {
-  width: 50%;
-  border-radius: 10px;
+.about-section:nth-of-type(even) {
+  flex-direction: row-reverse;
 }
 
-.about-preview div {
-  width: 50%;
-}
-
-/* SERVICES / CARDS */
 .services {
   display: flex;
-  gap: 20px;
-  justify-content: center;
+  gap: 10px;
 }
 
 .card {
   background: white;
-  padding: 30px;
+  padding: 20px;
   flex: 1;
   text-align: center;
-  border-radius: 10px;
 }
 
-/* GALLERY PREVIEW */
 .gallery-preview {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -114,134 +87,31 @@ footer {
 
 .gallery-preview img {
   width: 100%;
-  border-radius: 8px;
 }
 
-/* CTA SECTION */
-.cta {
-  text-align: center;
-  background: #222;
-  color: white;
-  border-radius: 10px;
-}
-
-.cta a {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 20px;
-  background: white;
-  color: black;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-/* PAGE TITLE */
-.page-title {
-  text-align: center;
-  background: white;
-  padding: 40px 20px;
-}
-
-/* ABOUT PAGE LAYOUT */
-.about-section {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  max-width: 1000px;
-  margin: auto;
-  background: white;
-  border-radius: 10px;
-}
-
-.about-section img {
-  width: 50%;
-  border-radius: 10px;
-}
-
-.about-section div {
-  width: 50%;
-}
-
-/* Alternate layout (flip direction) */
-.about-section:nth-child(even) {
-  flex-direction: row-reverse;
-}
-
-/* GALLERY PAGE GRID */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  max-width: 1000px;
-  margin: auto;
-}
-
-.gallery-grid img {
-  width: 100%;
-  border-radius: 8px;
-}
-
-/* CONTACT FORM */
 .contact-form {
-  max-width: 600px;
+  max-width: 500px;
   margin: auto;
   background: white;
-  padding: 30px;
-  border-radius: 10px;
+  padding: 20px;
 }
 
-.contact-form form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+input, textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
 }
 
-.contact-form input,
-.contact-form textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.contact-form button {
-  padding: 10px;
+button {
   background: #222;
   color: white;
+  padding: 10px;
   border: none;
-  cursor: pointer;
 }
 
-/* RESPONSIVE DESIGN */
-@media (max-width: 768px) {
-
-  header nav {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .hero,
-  .services,
-  .about-preview,
-  .about-section {
-    flex-direction: column;
-  }
-
-  .about-preview img,
-  .about-preview div,
-  .about-section img,
-  .about-section div {
-    width: 100%;
-  }
-
-  .gallery-preview,
-  .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 480px) {
-  .gallery-preview,
-  .gallery-grid {
-    grid-template-columns: 1fr;
-  }
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #222;
+  color: white;
 }
