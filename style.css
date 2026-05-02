@@ -6,24 +6,30 @@
 
 body {
   font-family: Arial, sans-serif;
-  background: #f5f5f5;
+  background: #f4f4f4;
   color: #333;
   line-height: 1.6;
 }
 
-/* GLOBAL CONTAINER (THIS FIXES EVERYTHING) */
+/* =========================
+   LAYOUT CONTAINER
+========================= */
 .container {
   max-width: 1100px;
   margin: auto;
   padding: 0 20px;
 }
 
-/* SECTION SPACING */
+/* =========================
+   SECTION SPACING
+========================= */
 section {
   padding: 60px 0;
 }
 
-/* HEADER */
+/* =========================
+   HEADER / NAV
+========================= */
 header {
   background: #222;
   color: white;
@@ -50,135 +56,14 @@ nav a {
   text-decoration: none;
 }
 
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #222;
-  color: white;
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial;
-  background: #f5f5f5;
-  color: #333;
-}
-
-header {
-  background: #222;
-  color: white;
-  padding: 20px;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 15px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-}
-
-section {
-  padding: 40px 20px;
-}
-
-.page-title {
-  text-align: center;
-  background: white;
-}
-
+/* =========================
+   HERO
+========================= */
 .hero {
   display: flex;
   gap: 10px;
-}
-
-.hero img {
-  width: 100%;
-}
-
-.about-preview,
-.about-section {
-  display: flex;
-  gap: 20px;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: auto;
-  background: white;
-  padding: 20px;
-}
-
-.about-section:nth-of-type(even) {
-  flex-direction: row-reverse;
-}
-
-.services {
-  display: flex;
-  gap: 10px;
-}
-
-.card {
-  background: white;
-  padding: 20px;
-  flex: 1;
-  text-align: center;
-}
-
-.gallery-preview {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  max-width: 1000px;
-  margin: auto;
-}
-
-.gallery-preview img {
-  width: 100%;
-}
-
-.contact-form {
-  max-width: 500px;
-  margin: auto;
-  background: white;
-  padding: 20px;
-}
-
-input, textarea {
-  width: 100%;
-  margin-bottom: 10px;
-  padding: 8px;
-}
-
-button {
-  background: #222;
-  color: white;
-  padding: 10px;
-  border: none;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #222;
-  color: white;
-}
-
-
-.hero {
-  display: flex;
-  gap: 10px;
 }
 
 .hero .slide img {
@@ -186,6 +71,9 @@ footer {
   border-radius: 10px;
 }
 
+/* =========================
+   ABOUT SECTIONS
+========================= */
 .about-preview,
 .about-section {
   display: flex;
@@ -194,15 +82,29 @@ footer {
   background: white;
   padding: 20px;
   border-radius: 10px;
+  max-width: 1100px;
+  margin: auto;
 }
 
 .about-section:nth-of-type(even) {
   flex-direction: row-reverse;
 }
 
+.about-preview img,
+.about-section img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+/* =========================
+   SERVICES / CARDS
+========================= */
 .services {
   display: flex;
   gap: 15px;
+  max-width: 1100px;
+  margin: auto;
 }
 
 .card {
@@ -213,10 +115,15 @@ footer {
   border-radius: 10px;
 }
 
+/* =========================
+   GALLERY GRID
+========================= */
 .gallery-preview {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
+  max-width: 1100px;
+  margin: auto;
 }
 
 .gallery-preview img {
@@ -224,13 +131,57 @@ footer {
   border-radius: 8px;
 }
 
+/* =========================
+   CTA
+========================= */
 .cta {
   text-align: center;
   background: #222;
   color: white;
   border-radius: 10px;
+  max-width: 1100px;
+  margin: auto;
 }
 
+/* =========================
+   CONTACT FORM
+========================= */
+.contact-form {
+  max-width: 500px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+button {
+  background: #222;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #222;
+  color: white;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
 @media (max-width: 768px) {
   .hero,
   .about-preview,
